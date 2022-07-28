@@ -11,13 +11,3 @@ spec:
       envFrom:
         - configMapRef:
             name: "portal-configmap"
-    - name: exu-news-container-2
-      image: aluracursos/portal-noticias:1
-      envFrom:
-        - configMapRef:
-            name: "portal-configmap"
-    - name: exu-news-container-3
-      image: aluracursos/portal-noticias:1
-      envFrom:
-        - configMapRef:
-            name: "portal-configmap"
