@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: exu-news-system
+  labels:
+    app: exu-dasmatas-nginx
+spec:
+  containers:
+    - name: exu-dasmatas-system-news-1
+      image: aluracursos/sistema-noticias:1
+    - name: exu-dasmatas-system-news-2
+      image: aluracursos/sistema-noticias:1
+    - name: exu-dasmatas-system-news-3
+      image: aluracursos/sistema-noticias:1
