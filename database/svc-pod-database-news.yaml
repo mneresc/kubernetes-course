@@ -3,10 +3,8 @@ kind: Service
 metadata:
   name: svc-pod-news-database
 spec:
-  type: NodePort
+  type: ClusterIP
   selector: 
     app: exu-marabo-database
   ports:
     - port: 3306
-      targetPort: 3306
-      nodePort: 30001

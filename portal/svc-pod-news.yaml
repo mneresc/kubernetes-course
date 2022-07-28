@@ -5,8 +5,9 @@ metadata:
 spec:
   type: NodePort
   selector: 
-    app: exu-dasmatas-nginx
+    app: exu-caveira-nginx
   ports:
     - port: 80
       targetPort: 80
       nodePort: 30000
+

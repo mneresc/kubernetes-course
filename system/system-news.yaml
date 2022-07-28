@@ -8,7 +8,22 @@ spec:
   containers:
     - name: exu-dasmatas-system-news-1
       image: aluracursos/sistema-noticias:1
+      envFrom:
+        - configMapRef:
+            name: "system-configmap"
+      ports:
+        - containerPort: 80
     - name: exu-dasmatas-system-news-2
       image: aluracursos/sistema-noticias:1
+      envFrom:
+        - configMapRef:
+            name: "system-configmap"
+      ports:
+        - containerPort: 80
     - name: exu-dasmatas-system-news-3
       image: aluracursos/sistema-noticias:1
+      envFrom:
+        - configMapRef:
+            name: "system-configmap"
+      ports:
+        - containerPort: 80
