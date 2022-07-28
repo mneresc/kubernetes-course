@@ -4,5 +4,7 @@ metadata:
   name: exu-nginx
 spec:
   containers:
-    - name: nginx-container
+    - name: exu-nginx-container
       image: nginx:latest
+      ports:
+        - containerPort: 80

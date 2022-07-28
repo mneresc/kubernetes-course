@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: exu-news-project
+  labels:
+    app: exu-caveira-nginx
+spec:
+  containers:
+    - name: exu-news-container
+      image: aluracursos/portal-noticias:1
+    - name: exu-news-container-2
+      image: aluracursos/portal-noticias:1
+    - name: exu-news-container-3
+      image: aluracursos/portal-noticias:1
