@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: exu-nginx
+spec:
+  template:
+    metadata:
+      name: exu-news-portal
+      labels:
+        app: exu-caveira-nginx
+    spec:
+      containers:
+        - name: exu-news-container
+          image: aluracursos/portal-noticias:1
+          envFrom:
+            - configMapRef:
+                name: "portal-configmap"
+  replicas: 3
+  selector:
+    matchLabels: 
+      app: exu-caveira-nginx
