@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exu-nginx
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: exu-nginx
+      labels:
+        app: exu-nginx-pod
+    spec:
+      containers:
+        - name: exu-nginx-container
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+  selector:
+    matchLabels:
+      app: exu-nginx-pod

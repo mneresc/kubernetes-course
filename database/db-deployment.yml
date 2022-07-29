@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exu-marabo-database-deployment
+spec:
+  template:
+    metadata:
+      name: exu-marabo-database
+      labels:
+        app: exu-marabo-database
+    spec:
+      containers:
+        - name: exu-marabo-database-container
+          image: aluracursos/mysql-db:1
+          envFrom:
+            - configMapRef:
+                name: config-map-database
+          ports:
+            - containerPort: 3306
+  selector:
+    matchLabels: 
+      app: exu-marabo-database

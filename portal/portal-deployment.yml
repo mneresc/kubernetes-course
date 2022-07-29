@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portal-exu-caveira-deployment
+spec:
+  template:
+    metadata:
+      name: portal-exu-caveira
+      labels:
+        app: portal-exu-caveira
+    spec:
+      containers:
+        - name: portal-exu-caveira-container
+          image: aluracursos/portal-noticias:1
+          envFrom:
+            - configMapRef:
+                name: portal-exu-caveira-config
+  replicas: 3
+  selector:
+    matchLabels: 
+      app: portal-exu-caveira
