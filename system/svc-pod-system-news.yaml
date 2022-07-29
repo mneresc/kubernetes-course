@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-pod-news-system
+  name: svc-exu-dasmatas-system
 spec:
   type: NodePort
   selector: 
-    app: exu-dasmatas-nginx
+    app: exu-dasmatas-system
   ports:
     - port: 80
       targetPort: 80

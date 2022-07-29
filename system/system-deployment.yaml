@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: exu-news-system
+  name: exu-dasmatas-system-deployment
 spec:
   replicas: 1
   template:
     metadata:
-      name: exu-news-portal
+      name: exu-dasmatas-system
       labels:
         app: exu-dasmatas-system
     spec:
       containers:
-        - name: exu-dasmatas-system-news
+        - name: exu-dasmatas-system-containers
           image: aluracursos/sistema-noticias:1
           envFrom:
             - configMapRef:
-                name: "system-configmap"
+                name: system-configmap
           ports:
             - containerPort: 80
   selector:
